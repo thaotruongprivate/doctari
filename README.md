@@ -28,3 +28,7 @@ We wish you success!
 ## Run the tool
 
 1. `yarn webpack` (watcher)
+
+## Finish
+
+1. Please send your solution as a zip-file to "hiring-it@doctari.de".
