@@ -1,5 +1,5 @@
 import axios from 'axios';
-import Address from "../Models/Address";
+import Address from "../models/Address";
 import config from "../../config";
 
 class GoogleAddressService {
