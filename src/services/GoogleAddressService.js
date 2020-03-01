@@ -13,7 +13,7 @@ class GoogleAddressService {
     }
 
     _getStateFromGoogleResponse(response) {
-        for(const component of response.data.results[0].address_components) {
+        for (const component of response.data.results[0].address_components) {
             if (component.types.includes('administrative_area_level_1')) {
                 return component.long_name;
             }
