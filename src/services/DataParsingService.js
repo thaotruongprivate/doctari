@@ -1,5 +1,5 @@
 class DataParsingService {
-    parseData(text) {
+    parsePersons(text) {
         const data = [];
         const persons = text.split(/\r?\n\r?\n/);
         for (const person of persons) {

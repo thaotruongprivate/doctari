@@ -6,7 +6,7 @@ import GoogleAddressService from "./services/GoogleAddressService";
 readFile('../data/testdaten.txt').then(async (content) => {
     const dataParsingService = new DataParsingService();
     const googleAddressService = new GoogleAddressService();
-    const persons = dataParsingService.parseData(content);
+    const persons = dataParsingService.parsePersons(content);
     for (const person of persons) {
         const address = await googleAddressService.createAddress(person.address);
         if (address) {
