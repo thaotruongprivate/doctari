@@ -1,3 +1,5 @@
+import GermanAddress from "../models/GermanAddress";
+
 class DataParsingService {
     parsePersons(text: string) {
         const data = [];
@@ -5,7 +7,11 @@ class DataParsingService {
         for (const person of persons) {
             const nameAndAddress = person.split(/\r?\n/);
             const name = nameAndAddress[0];
-            const address = this._parseAddress(nameAndAddress[1], nameAndAddress[2]);
+            const addressParts = this._parseAddress(nameAndAddress[1], nameAndAddress[2]);
+            const address = new GermanAddress(addressParts.streetName,
+                addressParts.houseNumber,
+                addressParts.postcode,
+                addressParts.city);
             data.push({
                 name,
                 address
