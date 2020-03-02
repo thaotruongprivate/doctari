@@ -25,7 +25,7 @@ class GermanAddress extends Address {
         return this._state;
     }
 
-    _getApiEndpoint() {
+    private _getApiEndpoint() {
         return `https://maps.googleapis.com/maps/api/geocode/json?address=${this.postcode}+${this.city}+${this.country}&key=${process.env.GOOGLE_API_KEY}`;
     }
 }
