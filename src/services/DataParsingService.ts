@@ -20,7 +20,7 @@ class DataParsingService {
         return data;
     }
 
-    _parseAddress(streetAddress: string, postcodeAndCity: string) {
+    private _parseAddress(streetAddress: string, postcodeAndCity: string) {
         let streetName, houseNumber, postcode, city;
         [streetName, houseNumber] = this._parseStreetNameAndHouseNumber(streetAddress);
         [postcode, city] = this._parsePostcodeAndCity(postcodeAndCity);
@@ -32,14 +32,14 @@ class DataParsingService {
         };
     }
 
-    _parseStreetNameAndHouseNumber(streetAddress: string) {
+    private _parseStreetNameAndHouseNumber(streetAddress: string) {
         const parts = streetAddress.split(' ');
         const houseNumber = parts.pop();
         const streetName = parts.join(' ');
         return [streetName, houseNumber];
     }
 
-    _parsePostcodeAndCity(postcodeAndCity: string) {
+    private _parsePostcodeAndCity(postcodeAndCity: string) {
         const parts = postcodeAndCity.split(' ');
         const postcode = parts.shift();
         const city = parts.join(' ');

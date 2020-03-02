@@ -8,8 +8,8 @@ This website displays names and addresses of 20 persons from a test-data text fi
 ## Installation
 - clone the repository and cd into the destination folder
 - run `yarn install`
-- go to config.js file and hard-code the google_api_key value 
-- run webpack to compile a js file `yarn webpack --mode production`
+- create an .env file in your root directory and add GOOGLE_API_KEY `GOOGLE_API_KEY=<GOOGLE_API_KEY>`
+- run webpack to compile a js file `yarn webpack`
 - install some server to serve the website, I used http-server `yarn add http-server -g`
 - run `http-server -o dist -d false`, the website will open in a browser automatically
 

@@ -1,9 +1,9 @@
 class Address {
-    _streetName: string;
-    _houseNumber: string;
-    _postcode: string;
-    _city: string;
-    _country: string;
+    protected _streetName: string;
+    protected _houseNumber: string;
+    protected _postcode: string;
+    protected _city: string;
+    protected _country: string;
 
     constructor(streetName: string, houseNumber: string, postcode: string, city: string, country: string) {
         this._streetName = streetName;

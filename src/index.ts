@@ -11,9 +11,9 @@ readFile('../data/testdaten.txt').then(async (content: string) => {
         const state = await address.getState();
         const app = document.getElementById('root');
         const p = document.createElement('p');
-        p.innerText = `Name: ${person.name}, 
-address: ${addressFormatter.outputCommaFormat()}, 
-state: ${state}`;
+        p.innerText = `Name: ${person.name}
+Address: ${addressFormatter.outputCommaFormat()} 
+State: ${state}`;
         app.appendChild(p);
     }
 });
