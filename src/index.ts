@@ -1,13 +1,13 @@
 import readFile from './utils/readFile';
 import DataParsingService from "./services/DataParsingService";
 import $ from 'jquery';
-import Address from "./models/Address";
+import GermanAddress from "./models/GermanAddress";
 
-readFile('../data/testdaten.txt').then(async (content) => {
+readFile('../data/testdaten.txt').then(async (content: string) => {
     const dataParsingService = new DataParsingService();
     const persons = dataParsingService.parsePersons(content);
     for (const person of persons) {
-        const address = new Address(
+        const address = new GermanAddress(
             person.address.streetName,
             person.address.houseNumber,
             person.address.postcode,
